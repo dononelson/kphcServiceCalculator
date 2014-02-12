@@ -9,9 +9,10 @@
 	<modules>
 		<module>../webui</module>
 		<module>../crudservices</module>
-		<module>../wsservices</module>
+		
 		<module>../utils</module>
 		<module>../calcservices</module>
+		<module>../webservices</module>
 	</modules>
 	<repositories>
 		<repository>
