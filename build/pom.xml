@@ -84,5 +84,6 @@
 		<commons_io_version>2.1</commons_io_version>
 		<commons_lang_version>2.6</commons_lang_version>
 		<commons_logging_version>1.1.1</commons_logging_version>
+    	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 </project>
