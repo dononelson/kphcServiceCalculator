@@ -9,7 +9,6 @@
 	<modules>
 		<module>../webui</module>
 		<module>../crudservices</module>
-		
 		<module>../utils</module>
 		<module>../calcservices</module>
 		<module>../webservices</module>
@@ -27,10 +26,17 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<inherited>true</inherited>
-				<version>3.1</version>
+				<version>${compiler_plugin_version}</version>
 				<configuration>
-					<source>1.7</source>
-					<target>1.7</target>
+					<source>${java_version}</source>
+					<target>${java_version}</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<configuration>
+					<webXml>WebContent/WEB-INF/web.xml</webXml>
 				</configuration>
 			</plugin>
 		</plugins>
@@ -39,29 +45,29 @@
 		<dependency>
 			<groupId>javax</groupId>
 			<artifactId>javaee-web-api</artifactId>
-			<version>6.0</version>
+			<version>${javaee_version}</version>
 			<scope>provided</scope>
 		</dependency>
 
 		<dependency>
 			<groupId>commons-io</groupId>
 			<artifactId>commons-io</artifactId>
-			<version>2.1</version>
+			<version>${commons_io_version}</version>
 		</dependency>
 		<dependency>
 			<groupId>commons-lang</groupId>
 			<artifactId>commons-lang</artifactId>
-			<version>2.6</version>
+			<version>${commons_lang_version}</version>
 		</dependency>
 		<dependency>
 			<groupId>commons-logging</groupId>
 			<artifactId>commons-logging</artifactId>
-			<version>1.1.1</version>
+			<version>${commons_logging_version}</version>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.10</version>
+			<version>${junit_version}</version>
 			<scope>test</scope>
 		</dependency>
 
@@ -69,9 +75,14 @@
 	<properties>
 		<spring_version>1</spring_version>
 		<java_version>1.7</java_version>
+		<compiler_plugin_version>3.1</compiler_plugin_version>
+		<javaee_version>6.0</javaee_version>
 		<mysql_version>1.0</mysql_version>
-		<junit_version>1</junit_version>
+		<junit_version>4.10</junit_version>
 		<spring_cloud_version>1</spring_cloud_version>
 		<testng_version>1</testng_version>
+		<commons_io_version>2.1</commons_io_version>
+		<commons_lang_version>2.6</commons_lang_version>
+		<commons_logging_version>1.1.1</commons_logging_version>
 	</properties>
 </project>
