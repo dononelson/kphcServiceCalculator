@@ -3,6 +3,9 @@
 	<name>webservices</name>
 	<comment></comment>
 	<projects>
+		<project>calcservices</project>
+		<project>crudservices</project>
+		<project>utils</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

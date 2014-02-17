@@ -7,11 +7,11 @@
 	<packaging>pom</packaging>
 	<name>build</name>
 	<modules>
-		<module>../webui</module>
-		<module>../crudservices</module>
 		<module>../utils</module>
+		<module>../crudservices</module>
 		<module>../calcservices</module>
 		<module>../webservices</module>
+		<module>../webui</module>
 	</modules>
 	<repositories>
 		<repository>
