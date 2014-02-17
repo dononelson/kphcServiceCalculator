@@ -75,7 +75,7 @@
 	<properties>
 		<spring_version>1</spring_version>
 		<java_version>1.7</java_version>
-		<compiler_plugin_version>3.1</compiler_plugin_version>
+		<compiler_plugin_version>3.0</compiler_plugin_version>
 		<javaee_version>6.0</javaee_version>
 		<mysql_version>1.0</mysql_version>
 		<junit_version>4.10</junit_version>
