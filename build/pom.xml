@@ -88,7 +88,7 @@
 		<project.mysql.version>1.0</project.mysql.version>
 		<project.junit.version>4.10</project.junit.version>
 		<project.spring_cloud.version>1</project.spring_cloud.version>
-		<project.testng.version>1</project.testng.version>
+		<project.testng.version>6.1.1</project.testng.version>
 		<project.commons_io.version>2.1</project.commons_io.version>
 		<project.commons_lang.version>2.6</project.commons_lang.version>
 		<project.commons_logging.version>1.1.1</project.commons_logging.version>

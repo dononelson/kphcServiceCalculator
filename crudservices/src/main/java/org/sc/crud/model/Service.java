@@ -3,8 +3,6 @@ package org.sc.crud.model;
 import java.io.Serializable;
 import javax.persistence.*;
 
-import org.testng.Assert;
-
 import java.lang.Float;
 import java.util.ArrayList;
 import java.util.Arrays;
