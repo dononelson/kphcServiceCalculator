@@ -24,7 +24,7 @@ import java.util.List;
  *
  */
 public class DateShiftMapper implements Mapper<DatedEffort, DatedEffort, DateShiftInfo> {
-    @Override
+   @Override
     public List<DatedEffort> apply(List<DatedEffort> datedEfforts, DateShiftInfo dsf) {
         Date firstDate = datedEfforts.get(0).date;
         Date lastDate = datedEfforts.get(datedEfforts.size() - 1).date;

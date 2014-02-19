@@ -18,7 +18,7 @@ import org.sc.calc.domain.DatedEffort;
 import org.sc.calc.domain.Service;
 
 public class CalendarTaskMapper implements Mapper<Task, CalendarTask, List<Service>> {
-    @Override
+   @Override
     public List<CalendarTask> apply(List<Task> ts, List<Service> ss) {
         List<CalendarTask> cts = new ArrayList<CalendarTask>();
         for (Task t : ts) {
