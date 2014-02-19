@@ -8,10 +8,11 @@
 	<name>build</name>
 	<modules>
 		<module>../utils</module>
-		<module>../crudservices</module>
 		<module>../calcservices</module>
 		<module>../webservices</module>
 		<module>../webui</module>
+		<module>../boot-webservices</module>
+		<module>../crudservices</module>
 	</modules>
 	<repositories>
 		<repository>
