@@ -3,10 +3,9 @@ package com.kaiser;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.ImportResource;
 
-@ImportResource(value = "classpath:META-INF/base-app-context.xml")
-@ComponentScan(basePackages = { "com.kaiser", "com.kaiser.controller", "com.kaiser.config.security" })
+//@ImportResource(value = "classpath:META-INF/base-app-context.xml")
+@ComponentScan(basePackages = { "org.sc", "com.kaiser", "com.kaiser.controller", "com.kaiser.config.security" })
 @EnableAutoConfiguration
 public class Application {
 

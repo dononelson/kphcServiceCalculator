@@ -29,7 +29,7 @@ public class Config {
         final LocalContainerEntityManagerFactoryBean lef = new LocalContainerEntityManagerFactoryBean();
         lef.setDataSource(dataSource);
         lef.setJpaVendorAdapter(jpaVendorAdapter);
-        lef.setPackagesToScan("hello");
+        lef.setPackagesToScan("org.sc.crud.model");
         return lef;
     }
 
