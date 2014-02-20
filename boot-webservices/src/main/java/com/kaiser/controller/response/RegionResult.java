@@ -5,7 +5,6 @@ import java.util.Set;
 
 public class RegionResult {
     private String region;
-    private String environmentType;
     private Set<DateResult> dateResults;
 
     public String getRegion() {
@@ -14,14 +13,6 @@ public class RegionResult {
 
     public void setRegion(final String region) {
         this.region = region;
-    }
-
-    public String getEnvironmentType() {
-        return environmentType;
-    }
-
-    public void setEnvironmentType(final String environmentType) {
-        this.environmentType = environmentType;
     }
 
     public Set<DateResult> getDateResults() {
