@@ -4,8 +4,8 @@ import org.junit.Test;
 
 public class SimplestTest {
 
-	@Test
-	public void simpleTest() {
+    @Test
+    public void simpleTest() {
 
-	}
+    }
 }

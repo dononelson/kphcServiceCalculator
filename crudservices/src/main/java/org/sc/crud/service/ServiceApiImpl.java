@@ -10,14 +10,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 // implementation for service interface
 
 public class ServiceApiImpl implements ServiceApi {
-	@Autowired ServiceRepo dao;
-	
-	public Service findById(Long id) {
-		return (dao.findById(id));
-	}
+    @Autowired
+    ServiceRepo dao;
 
-	public List<Service> findAll() {
-		return dao.findAll();
-	}
+    @Override
+    public Service findById(final Long id) {
+        return (dao.findById(id));
+    }
+
+    @Override
+    public List<Service> findAll() {
+        return dao.findAll();
+    }
 
 }

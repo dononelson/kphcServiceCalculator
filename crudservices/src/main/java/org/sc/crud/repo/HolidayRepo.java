@@ -1,7 +1,5 @@
 package org.sc.crud.repo;
 
-
-
 import org.sc.crud.model.Holiday;
 import org.springframework.stereotype.Repository;
 
@@ -9,6 +7,4 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface HolidayRepo extends RepoBase<Holiday, Long> {
 
-
 }
-
