@@ -4,6 +4,12 @@
 	<groupId>boot-webservices</groupId>
 	<artifactId>boot-webservices</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<parent>
+		<groupId>org.sc</groupId>
+		<artifactId>build</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../build</relativePath>
+	</parent>
 	<build>
 		<plugins>
 			<plugin>
