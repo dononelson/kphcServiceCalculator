@@ -4,8 +4,15 @@
 	<groupId>boot-webservices</groupId>
 	<artifactId>boot-webservices</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<parent>
+		<groupId>org.sc</groupId>
+		<artifactId>build</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../build</relativePath>
+	</parent>
 	<build>
 		<plugins>
+<!-- 			
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.0</version>
@@ -14,7 +21,8 @@
 					<target>1.7</target>
 				</configuration>
 			</plugin>
-			<plugin>
+ -->			
+ 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<version>1.0.0.RC1</version>
