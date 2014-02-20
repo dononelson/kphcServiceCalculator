@@ -1,14 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
   <display-name>LoginExample</display-name>
   <servlet>
-        <servlet-name>LoginController</servlet-name>
-        <servlet-class>org.sc.LoginController</servlet-class>
+    <servlet-name>LoginController</servlet-name>
+    <servlet-class>org.sc.LoginController</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>calcController</servlet-name>
+    <servlet-class>org.sc.CalcController</servlet-class>
   </servlet>
   <servlet-mapping>
-     <servlet-name>LoginController</servlet-name>
-     <url-pattern>/LoginController/*</url-pattern>
+    <servlet-name>LoginController</servlet-name>
+    <url-pattern>/LoginController/*</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>calcController</servlet-name>
+    <url-pattern>/calcController/*</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CalcController</display-name>
+    <servlet-name>CalcController</servlet-name>
+    <servlet-class>org.sc.CalcController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CalcController</servlet-name>
+    <url-pattern>/CalcController</url-pattern>
   </servlet-mapping>
 </web-app>
