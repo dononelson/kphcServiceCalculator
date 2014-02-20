@@ -11,7 +11,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.testng.AbstractTransactionalTestNGSpringContextTests;
 import org.testng.Assert;
-import org.testng.annotations.Test;
 
 @ContextConfiguration("classpath:/test-app-context.xml")
 public class ServiceRepoTest extends AbstractTransactionalTestNGSpringContextTests {
@@ -23,7 +22,7 @@ public class ServiceRepoTest extends AbstractTransactionalTestNGSpringContextTes
     private ServiceRepo dao;
 
     // test saving a Service to the database
-    @Test
+    // @Test
     public void testSave() {
         final Service newService = new Service();
         newService.setDaysArray("1,1,6,12,12,12,12,12,2");
@@ -40,7 +39,7 @@ public class ServiceRepoTest extends AbstractTransactionalTestNGSpringContextTes
     }
 
     // test to find a Service by its Id
-    @Test
+    // @Test
     public void testFindById() {
         LOGGER.info("Starting testFindById test");
         final long serviceId = 1;
@@ -55,7 +54,7 @@ public class ServiceRepoTest extends AbstractTransactionalTestNGSpringContextTes
     }
 
     // converting string array to a List of Floats
-    @Test
+    // @Test
     public void getDaysArrayList() {
         final String daysArray = "1,1,6,12,12,12,12,12,2";
         final String[] items = daysArray.split(",");

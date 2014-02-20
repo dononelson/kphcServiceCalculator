@@ -62,11 +62,11 @@
 		</bean>
 	</beans>
 
-  	<beans profile="cloud">
+<!--   	<beans profile="cloud">
 	  	<cloud:data-source id="dataSource">
 	  		<cloud:connection properties="charset=utf-8" />
  			<cloud:pool pool-size="2" max-wait-time="2000" />
 	  	</cloud:data-source>
   	</beans>
-	
+ -->	
 </beans>
