@@ -1,0 +1,16 @@
+<taglib>
+	<tlib-version>1.0</tlib-version>
+	<jsp-version>2.1</jsp-version>
+	<short-name>Custom TLD for the who-what-where project</short-name>
+	<tag>
+		<name>printExperienceTree</name>
+		<tag-class>org.cloudfoundry.tag.ExperienceTree</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>experiences</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>java.util.List</type>
+		</attribute>
+	</tag>
+</taglib>

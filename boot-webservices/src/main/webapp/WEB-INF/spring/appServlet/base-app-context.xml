@@ -70,9 +70,26 @@
 	</beans>
 
 	<beans profile="cloud">
-		<cloud:data-source id="dataSource">
+		<!-- <context:property-placeholder location="classpath:jdbc.properties" 
+			/> -->
+		<bean id="dataSource1"
+			class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+			<property name="driverClassName" value="${cloud.services.kphc-mysql.connection.hostname}" />
+			<property name="url" value="${foo.driver}" />
+			<property name="username" value="${foo.driver}" />
+			<property name="password" value="${foo.driver}" />
+		</bean>
+	</beans>
+
+	<beans profile="cloud">
+		<cloud:data-source id="dataSource1">
 			<cloud:connection properties="charset=utf-8" />
 			<cloud:pool pool-size="2" max-wait-time="2000" />
 		</cloud:data-source>
+		<cloud:data-source id="dataSource2">
+			<cloud:connection properties="charset=utf-8" />
+			<cloud:pool pool-size="2" max-wait-time="2000" />
+		</cloud:data-source>
+
 	</beans>
 </beans>
