@@ -41,6 +41,8 @@ public class CalcController extends HttpServlet {
 		String numEnv = request.getParameter("envNum");
 		response.getWriter().print("start: " + sDate + " end: " + eDate + " region: " + region +
 				" Env type: " + envType + " # Env: " + numEnv);
+		
+		
 	}
 
 }
