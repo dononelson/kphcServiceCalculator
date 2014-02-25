@@ -1,4 +1,5 @@
 DROP TABLE IF EXISTS SERVICES;
+
 create table SERVICES
 (
 	Id                    		BIGINT   		NOT NULL,

@@ -10,10 +10,17 @@
         http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa.xsd
         http://www.springframework.org/schema/data/repository http://www.springframework.org/schema/data/repository/spring-repository.xsd
         http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-3.1.xsd">
-
+	
+<!--
+	<jdbc:initialize-database data-source="dataSource" ignore-failures="DROPS">
+   		<jdbc:script location="classpath:test_schema.sql"/>
+   		<jdbc:script location="classpath:test_data.sql"/>
+	</jdbc:initialize-database>
+-->
 
 	<tx:annotation-driven transaction-manager="transactionManager" />
-    <context:component-scan base-package="org.sc.crud"/>
+	<context:component-scan base-package="org.sc.crud"/>
+
 	<bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"
 		p:dataSource-ref="dataSource" p:jpaVendorAdapter-ref="jpaAdapter">
 		<property name="packagesToScan">
@@ -23,21 +30,14 @@
 		</property>
 		<property name="jpaPropertyMap">
 			<map>
-				<!--<entry key="hibernate.ejb.naming_strategy" value="org.hibernate.cfg.DefaultNamingStrategy" />-->
-				<!--<entry key="hibernate.connection.charSet" value="UTF-8" />-->
-				<!--<entry key="hibernate.show_sql" value="true" />-->
-				<!--<entry key="hibernate.use_sql_comments" value="true" />-->
-				<!--<entry key="hibernate.format_sql" value="true" />-->
-			<!--&lt;!&ndash; 	<entry key="hibernate.hbm2ddl.auto" value="update" />  &ndash;&gt;-->
-			<!--&lt;!&ndash;	<entry key="hibernate.dialect" value="${hibernate.dialect:org.hibernate.dialect.PostgreSQLDialect}" />&ndash;&gt;-->
-				 <!--<entry key="hibernate.dialect" value="org.hibernate.dialect.HSQLDialect" />-->
-
-
-                <entry key="hibernate.connection.url" value="jdbc:hsqldb:mem:testdb"/>
-                <entry key="hibernate.connection.driver_class" value="org.hsqldb.jdbcDriver"/>
-                <entry key="hibernate.dialect" value="org.hibernate.dialect.HSQLDialect"/>
-                <entry key="hibernate.connection.provider.class" value="org.hibernate.connection.DriverManagerConnectionProvider"/>
-                <!--<entry key="hibernate.hbm2ddl.auto" value="create-drop"/>-->
+				<entry key="hibernate.ejb.naming_strategy" value="org.hibernate.cfg.DefaultNamingStrategy" />
+				<entry key="hibernate.connection.charSet" value="UTF-8" />
+				<entry key="hibernate.show_sql" value="true" />
+				<entry key="hibernate.use_sql_comments" value="true" />
+				<entry key="hibernate.format_sql" value="true" />
+			<!-- 	<entry key="hibernate.hbm2ddl.auto" value="update" />  -->
+			<!--	<entry key="hibernate.dialect" value="${hibernate.dialect:org.hibernate.dialect.PostgreSQLDialect}" />-->
+				 <entry key="hibernate.dialect" value="org.hibernate.dialect.HSQLDialect" /> 
 			</map>
 		</property>
 
@@ -53,12 +53,23 @@
 
 	<jpa:repositories base-package="org.sc.crud.repo" />
 
-
-    <jdbc:embedded-database id="dataSource" type="HSQL"/>
-
-    <jdbc:initialize-database data-source="dataSource" ignore-failures="DROPS">
-        <jdbc:script location="classpath:test_schema.sql"/>
-        <jdbc:script location="classpath:test_data.sql"/>
-    </jdbc:initialize-database>
+	<beans profile="default">
+		<!-- 
+	    <context:property-placeholder location="classpath:jdbc.properties" />
+         -->
+		<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+			<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+			<property name="url" value="jdbc:mysql://localhost:3306/test" />
+			<property name="username" value="root" />
+			<property name="password" value="" />
+		</bean>
+	</beans>
+ 
+  	<beans profile="cloud">
+	  	<cloud:data-source id="dataSource">
+	  		<cloud:connection properties="charset=utf-8" />
+ 			<cloud:pool pool-size="2" max-wait-time="2000" />
+	  	</cloud:data-source>
+  	</beans>
 
 </beans>

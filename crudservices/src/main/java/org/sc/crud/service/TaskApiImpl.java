@@ -9,7 +9,10 @@ import org.sc.crud.model.Task;
 import org.sc.crud.repo.TaskRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import org.springframework.stereotype.Service;
+
 // implementation for service interface
+@Service("taskApi")
 public class TaskApiImpl implements TaskApi {
     @Autowired
     TaskRepo dao;
@@ -30,4 +33,7 @@ public class TaskApiImpl implements TaskApi {
         return tasks;
     }
 
+    public void save(Task task) {
+        dao.save(task);
+    }
 }
